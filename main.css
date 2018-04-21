@@ -2,3 +2,34 @@
 Header only needs logo
 Use Slick.js for carousel
 Use flexbox instead of grid */
+
+body {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+.flexContainer {
+  display: flex;
+  align-items: center;
+}
+#marketing {
+  background-color: #228848;
+  color: white;
+  font-size: .9em;
+  width: 100%;
+}
+#marketing .flexContainer {
+  flex-direction: row;
+  align-content: space-between;
+}
+#marketing .flexContainer :nth-child(1) {
+  flex-grow: 8;
+}
+#marketing .flexContainer :nth-child(2) {
+  flex-grow: 2;
+}
+#marketing li {
+  display: inline-block;
+  padding-right: 1em;
+}
