@@ -6,17 +6,28 @@ Use flexbox instead of grid */
 body {
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgb(247, 247, 247);
+  color: rgb(100, 100, 100);
+  font-size: 14px;
   text-align: center;
   margin: 0;
 }
+#marketing a {
+  text-decoration: none;
+  color: white;
+}
+#marketing a:hover {
+  text-decoration: underline;
+}
 .flexContainer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 #marketing {
   background-color: #228848;
   color: white;
-  font-size: .9em;
+  font-size: .8em;
   width: 100%;
 }
 #marketing .flexContainer {
@@ -32,4 +43,36 @@ body {
 #marketing li {
   display: inline-block;
   padding-right: 1em;
+}
+#header {
+  margin-bottom: 10px;
+  height: 100%;
+}
+#header .logoHolder img {
+  padding-left: 3px;
+  float: left;
+  width: 70%;
+}
+.icon-hamburger {
+  padding: 10px;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.categoryContainer {
+  justify-content: center;
+  align-content: space-between;
+}
+.categoryLinkage {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.categoryContainer .categoryLinkage
+
+/* MEDIA QUERIES */
+
+@@media only screen and (max-width: 1050px;) {
+
 }
