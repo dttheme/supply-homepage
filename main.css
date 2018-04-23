@@ -6,11 +6,30 @@ Use flexbox instead of grid */
 body {
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: rgb(247, 247, 247);
   color: rgb(100, 100, 100);
   font-size: 14px;
   text-align: center;
   margin: 0;
+}
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+#marketing {
+  background-color: #228848;
+  color: white;
+  font-size: .9em;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 #marketing a {
   text-decoration: none;
@@ -19,23 +38,15 @@ body {
 #marketing a:hover {
   text-decoration: underline;
 }
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-#marketing {
-  background-color: #228848;
-  color: white;
-  font-size: .8em;
-  width: 100%;
-}
 #marketing .flexContainer {
   flex-direction: row;
   align-content: space-between;
+  justify-content: space-around;
 }
 #marketing .flexContainer :nth-child(1) {
-  flex-grow: 8;
+  flex-grow: 6;
+  text-align: left;
+  padding-left: 20px;
 }
 #marketing .flexContainer :nth-child(2) {
   flex-grow: 2;
@@ -45,6 +56,7 @@ body {
   padding-right: 1em;
 }
 #header {
+  margin-top: 40px;
   margin-bottom: 10px;
   height: 100%;
 }
@@ -55,6 +67,80 @@ body {
 }
 .icon-hamburger {
   padding: 10px;
+  color: black;
+}
+.icon-hamburger:hover {
+  color: #228848;
+}
+.c-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #222223;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.c-menu--slide-left a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFF;
+    display: block;
+    transition: 0.3s;
+}
+.backContainer-left {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.mainMenu_titleContainer {
+  color: #FFFFF;
+  z-index: 2;
+}
+#homePageTop .flexContainer {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.leftMessageContainer {
+  height: 340px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  float: left;
+  width: 70%;
+  background-image: url(https://assets.hmwallace.com/sources/images/homepage/sh_home/jack-dana-desktop.jpg);
+}
+.rightMessageContainer {
+  margin-left: 20px;
+  height: 340px;
+  position: relative;
+  float: right;
+  width: 30%;
+  background-image: url(https://assets.hmwallace.com/sources/images/homepage/sh_home/pro-benefits_light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rightMessageHeader {
+  font-size: 26px;
+  padding: 80px 50px 40px 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.rightMessageLink a {
+  margin: 0 auto;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #228848;
+  padding: 10px 0px;
+  width: 70%;
 }
 .img-responsive {
   display: block;
@@ -62,17 +148,40 @@ body {
   height: auto;
 }
 .categoryContainer {
-  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  justify-content: space-around;
   align-content: space-between;
 }
-.categoryLinkage {
-  padding-left: 3%;
-  padding-right: 3%;
+.categoryContainer a {
+  text-decoration: none;
+  color: #222223;
 }
-.categoryContainer .categoryLinkage
+.categoryLinkage {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.categoryLinkage img {
+  border: 1px solid #FFF;
+  margin-bottom: 10px;
+}
+.categoryLinkage img:hover {
+  border: 1px solid  #228848;
+}
+.sectionHeader {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+}
+#brandRatings {
+  background-color: #ececea;
+}
 
 /* MEDIA QUERIES */
 
-@@media only screen and (max-width: 1050px;) {
-
+@media (max-width: 1050px;) {
+  .leftMessageContainer {
+    width: 60%;
+    background-image: url(https://assets.hmwallace.com/sources/images/homepage/sh_home/jack-dana-tablet_landscape.jpg);
+  }
 }
