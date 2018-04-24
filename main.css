@@ -150,6 +150,7 @@ body {
   background-size: cover;
 }
 .rightMessageHeader {
+  color: #222223;
   font-size: 26px;
   padding: 80px 50px 40px 40px;
   font-weight: 700;
@@ -182,6 +183,7 @@ body {
   color: #222223;
 }
 .categoryLinkage {
+  margin: 0 auto;
   padding-left: 3px;
   padding-right: 3px;
 }
@@ -219,6 +221,17 @@ body {
 .ratingLinkContainer {
   margin-top: 10px;
 }
+#topSellingItems .flexContainer {
+  flex-direction: row;
+}
+.slick-prev:before, .slick-next:before{
+    color:red;
+}
+.slick-prev, .slick-next {
+  background-color: black;
+  height: 100px;
+  width: 100px;
+}
 #featuredBrands {
   padding: 40px 0;
 }
@@ -230,7 +243,7 @@ body {
   padding-top: 20px;
 }
 .featuredBrand {
-  padding: 10px;
+  padding: 20px;
 }
 .messageBlockRow .flexContainer {
   flex-direction: row;
@@ -242,12 +255,12 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-bottom: 4px;
+  margin-top: 4px;
 
 }
 .messageBlockRow h3 {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 900;
 }
 .messageBlockRow hr {
   height: 0;
@@ -265,6 +278,15 @@ body {
   height: 100%;
   position: relative;
 }
+.messageBlock p {
+  font-size: 16px;
+}
+.messageBlock a {
+  font-weight: 900;
+}
+.messageBlock a:hover {
+  text-decoration: none;
+}
 .messageBlock1 {
   float: left;
   background-image: url(https://assets.hmwallace.com//sources/images/homepage/duravit1.jpg);
@@ -277,9 +299,13 @@ body {
   width: 100%;
   background-image: url(https://assets.hmwallace.com//sources/images/homepage/specials-offers-full.jpg);
 }
+.messageBlock3 .messageCover {
+  padding-top: 20px;
+}
 .messageBlockRow .messageCover {
-  height: 230px;
-  /* padding: 40px; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .messageDark {
   color: #FFF;
@@ -290,6 +316,9 @@ body {
 }
 .messageLight {
   background-color: rgba(255,255,255,0.8);
+}
+.messageLight a {
+  color: #228848;
 }
 
 
@@ -315,7 +344,6 @@ body {
 }
 
 @media (max-width: 1050px) {
-
   #homePageTop .flexContainer {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -328,6 +356,15 @@ body {
   .rightMessageHeader {
     font-size: 23px;
   }
+  .categoryLinkage {
+    width: 20%;
+  }
+  .featuredBrand {
+    width: 20%;
+  }
+  .categoryLinkage img {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -338,6 +375,10 @@ body {
 @media (max-width: 769px) {
   #homePageTop .leftMessageContainer {
     background-image: url(https://assets.hmwallace.com/sources/images/homepage/sh_home/jack-dana-tablet.jpg)
+  }
+  .messageBlock1 p,
+  .messageBlock2 p {
+    display: none;
   }
 }
 
@@ -362,9 +403,4 @@ body {
   .messageBlockRow h3 {
     font-size: 24px;
   }
-  .messageBlock1 p,
-  .messageBlock2 p {
-    display: none;
-  }
-
 }
