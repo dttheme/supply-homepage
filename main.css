@@ -43,14 +43,6 @@ body {
   align-content: space-between;
   justify-content: space-around;
 }
-/* #marketing .flexContainer span:nth-child(1) {
-flex-grow: 6;
-text-align: left;
-padding-left: 20px;
-}
-#marketing .flexContainer :nth-child(2) {
-flex-grow: 2;
-} */
 #marketing li {
   display: inline-block;
   padding-right: 1em;
@@ -221,7 +213,6 @@ flex-grow: 2;
 .ratingLinkContainer {
   margin-top: 10px;
 }
-
 #topSellers {
   margin: 40px;
 }
@@ -241,10 +232,9 @@ flex-grow: 2;
   height: 75px;
   position: relative;
 }
-/* .hpCaroItemPrice {
-    position: absolute;
-    bottom: 10px;
-} */
+.hpCaroItemPrice {
+padding: 10px;
+}
 .hpCaroItemPrice span {
   color: #228848;
   font-weight: 700;
@@ -269,7 +259,6 @@ flex-grow: 2;
   background-color: rgba(34,34,34,0.75)!important;
   border: 1px solid #222223!important;
 }
-
 #featuredBrands {
   padding: 40px 0;
 }
@@ -283,7 +272,10 @@ flex-grow: 2;
 .featuredBrand {
   padding: 20px;
 }
-.messageBlockRow .flexContainer {
+#messageCenter {
+  height: 100%;
+}
+.messageeBlockRow .flexContainer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -294,7 +286,6 @@ flex-grow: 2;
   margin: 0;
   padding: 0;
   margin-top: 4px;
-
 }
 .messageBlockRow h3 {
   font-size: 28px;
@@ -358,16 +349,61 @@ flex-grow: 2;
 .messageLight a {
   color: #228848;
 }
-
-
-
-
-
-
-
-
-
-
+.footer {
+  margin-top: 40px;
+  padding: 20px 5px 40px 5px;
+  color: rgb(34, 34, 35);
+  background-color: rgb(242, 242, 242);
+  border-top: solid 4px rgb(212, 212, 212);
+  text-align: left;
+}
+.footer h4,
+.footerContactUs i {
+  color: #228848;
+}
+.footerIconContainer,
+.footerLinkContainer,
+.footerContactUs {
+  margin: 0 auto;
+}
+.footerIconContainer ul {
+  float: left;
+  list-style: none;
+}
+.footerIconContainer li {
+  display: inline-block;
+  padding-right: 1em;
+}
+.fa-facebook-square {
+  color: blue;
+}
+.fa-twitter-square {
+  color: lightblue;
+}
+.fa-pinterest-square {
+  color: red;
+}
+.fa-youtube-square {
+  color: darkred;
+}
+.footer .flexContainer {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footerLinkContainer a {
+  color: #222223;
+  text-decoration: none;
+}
+.footerLinkContainer a:hover {
+  text-decoration: underline;
+}
+.footerContactUs {
+  padding-top: 40px;
+}
+.contact {
+  padding: 3px 10px;
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 1800px) {

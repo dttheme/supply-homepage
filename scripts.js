@@ -12,10 +12,9 @@ $('.backContainer-left').on('click', function() {
 })
 
 $(document).ready(function(){
-  $('.slick-initialized').slick({
+  $('.slider').slick({
   accessbility: true,
   arrows: true,
-  dots: true,
   infinite: true,
   speed: 300,
   slidesToShow: 4,
