@@ -1,19 +1,23 @@
  $(() => {
    slickInit();
-   hamburgerClick();
  })
+
+
 function slickInit() {
    $('.slick-track').slick({
      accessbility: true,
      arrows: true,
   });
 }
-function hamburgerClick() {
-  $('icon-hamburger').click({
-    openLeftNav();
-  })
-}
-function openLeftNav() {
-   console.log("Heard!");
-   $('c-menu--slide-left').css('width', '250px');
-};
+
+$('.icon-hamburger').on('click', function() {
+  console.log('You clicked the hamburger!');
+  $('.c-menu--slide-left').css('left', '0');
+  // $('body').css('background-color', 'rgba(0,0,0,0.4)');
+})
+
+$('.backContainer-left').on('click', function() {
+  console.log('You clicked the back button!');
+  $('.c-menu--slide-left').css('left', '-360px');
+  // $('body').css('background-color', 'white');
+})

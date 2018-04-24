@@ -19,12 +19,12 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 65%;
 }
 #marketing {
   background-color: #228848;
   color: white;
-  font-size: .9em;
+  font-size: 12px;
   width: 100%;
   height: auto;
   position: fixed;
@@ -43,14 +43,14 @@ body {
   align-content: space-between;
   justify-content: space-around;
 }
-#marketing .flexContainer :nth-child(1) {
+/* #marketing .flexContainer span:nth-child(1) {
   flex-grow: 6;
   text-align: left;
   padding-left: 20px;
 }
 #marketing .flexContainer :nth-child(2) {
   flex-grow: 2;
-}
+} */
 #marketing li {
   display: inline-block;
   padding-right: 1em;
@@ -59,6 +59,7 @@ body {
   margin-top: 40px;
   margin-bottom: 10px;
   height: 100%;
+  border-bottom: 4px solid #b7b7bc;
 }
 #header .logoHolder img {
   padding-left: 3px;
@@ -74,33 +75,56 @@ body {
 }
 .c-menu {
   height: 100%;
-  width: 0;
+  width: 360px;
   position: fixed;
-  z-index: 1;
+  z-index: 201;
   top: 0;
-  left: 0;
-  background-color: #222223;
+  left: -360px;
+  background-color: #111;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
 }
+.c-menu--slide-left .flexContainer {
+  flex-direction: column;
+  align-items: flex-start;
+}
 .c-menu--slide-left a {
-    text-decoration: none;
-    font-size: 25px;
-    color: #FFFFF;
-    display: block;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 100;
+  display: block;
+  transition: 0.3s;
+}
+.c-menu--slide-left h4 {
+  margin: 0;
+  padding: 0;
+}
+.fa-caret-right {
+  color: #228848;
+  vertical-align: middle;
+  padding-right: 5px;
 }
 .backContainer-left {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  cursor: pointer;
+  color: #FFF;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 18px;
+  margin-left: 50px;
 }
 .mainMenu_titleContainer {
-  color: #FFFFF;
   z-index: 2;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.standalone_title h4 {
+  text-decoration: underline;
+}
+.standalone_title h4:hover {
+  text-decoration: none;
 }
 #homePageTop .flexContainer {
   flex-direction: row;
@@ -170,18 +194,177 @@ body {
 }
 .sectionHeader {
   font-size: 20px;
+  font-weight: 900;
+  color: #000;
   text-transform: uppercase;
   padding-bottom: 12px;
 }
 #brandRatings {
   background-color: #ececea;
+  padding: 20px 0px 40px 0px;
+}
+#brandRatings .flexContainer {
+  justify-content: space-around;
+  align-content: space-between;
+}
+.ratingContainer {
+  padding-top: 10px;
+}
+.ratingContainer a {
+  color: #222223;
+}
+.ratingContainer a:hover {
+  text-decoration: none;
+}
+.ratingLinkContainer {
+  margin-top: 10px;
+}
+#featuredBrands {
+  padding: 40px 0;
+}
+#featuredBrands .flexContainer {
+  align-content: space-between;
+  justify-content: space-around;
+}
+.featuredBrandLogoContainer {
+  padding-top: 20px;
+}
+.featuredBrand {
+  padding: 10px;
+}
+.messageBlockRow .flexContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.messageBlockRow {
+  height: 230px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+
+}
+.messageBlockRow h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.messageBlockRow hr {
+  height: 0;
+  box-sizing: content-box;
+  border-color: #228848;
+  border-style: solid none;
+  margin: 10px 30%;
+}
+.messageBlock {
+  padding-left: 0;
+  padding-right: 0;
+  background: center center;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.messageBlock1 {
+  float: left;
+  background-image: url(https://assets.hmwallace.com//sources/images/homepage/duravit1.jpg);
+}
+.messageBlock2 {
+  float: right;
+  background-image: url(https://assets.hmwallace.com//sources/images/homepage/kohler.jpg);
+}
+.messageBlock3 {
+  width: 100%;
+  background-image: url(https://assets.hmwallace.com//sources/images/homepage/specials-offers-full.jpg);
+}
+.messageBlockRow .messageCover {
+  height: 230px;
+  /* padding: 40px; */
+}
+.messageDark {
+  color: #FFF;
+  background-color: rgba(34,34,35,0.6);
+}
+.messageDark a {
+  color: #FFF;
+}
+.messageLight {
+  background-color: rgba(255,255,255,0.8);
 }
 
-/* MEDIA QUERIES */
 
-@media (max-width: 1050px;) {
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1800px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1050px) {
+
+  #homePageTop .flexContainer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+  }
   .leftMessageContainer {
-    width: 60%;
+    width: 65%;
     background-image: url(https://assets.hmwallace.com/sources/images/homepage/sh_home/jack-dana-tablet_landscape.jpg);
   }
+  .rightMessageHeader {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 900px) {
+  #marketingMessage {
+    display: none;
+  }
+}
+@media (max-width: 769px) {
+  #homePageTop .leftMessageContainer {
+    background-image: url(https://assets.hmwallace.com/sources/images/homepage/sh_home/jack-dana-tablet.jpg)
+  }
+}
+
+@media (max-width: 600px) {
+  #homePageTop .leftMessageContainer {
+  width: 100%;
+  }
+#homePageTop .rightMessageContainer {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  #header .flexContainer {
+    flex-wrap: nowrap;
+  }
+  #header .logoHolder img {
+    width: 50%;
+  }
+  .leftMessageContainer {
+    height: 240px;
+  }
+  .messageBlockRow h3 {
+    font-size: 24px;
+  }
+  .messageBlock1 p,
+  .messageBlock2 p {
+    display: none;
+  }
+
 }
