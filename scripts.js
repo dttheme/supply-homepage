@@ -12,13 +12,11 @@ $('.backContainer-left').on('click', function() {
 })
 
 $(document).ready(function(){
-  $('.slider').slick({
+  $('.slick-initialized').slick({
   accessbility: true,
   arrows: true,
-  prevArrow: '.slick-prev',
-  nextArrow: '.slick-next',
-  dots: false,
-  infinite: false,
+  dots: true,
+  infinite: true,
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 4,

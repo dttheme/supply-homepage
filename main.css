@@ -44,12 +44,12 @@ body {
   justify-content: space-around;
 }
 /* #marketing .flexContainer span:nth-child(1) {
-  flex-grow: 6;
-  text-align: left;
-  padding-left: 20px;
+flex-grow: 6;
+text-align: left;
+padding-left: 20px;
 }
 #marketing .flexContainer :nth-child(2) {
-  flex-grow: 2;
+flex-grow: 2;
 } */
 #marketing li {
   display: inline-block;
@@ -221,17 +221,55 @@ body {
 .ratingLinkContainer {
   margin-top: 10px;
 }
-#topSellingItems .flexContainer {
-  flex-direction: row;
+
+#topSellers {
+  margin: 40px;
 }
-.slick-prev:before, .slick-next:before{
-    color:red;
+#topSellers a {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.caroItemImageContaner {
+  padding: 30px 30px 0;
+}
+.hpCaroItemData {
+  background-color: #ececea;
+  padding: 10px;
+  margin: 0 2px;
+  height: 75px;
+  position: relative;
+}
+/* .hpCaroItemPrice {
+    position: absolute;
+    bottom: 10px;
+} */
+.hpCaroItemPrice span {
+  color: #228848;
+  font-weight: 700;
+}
+.slider {
+  height: 300px;
+}
+.slide {
+  height: 100%;
+}
+.slide img {
+  width: 150px;
+  margin: 0;
+}
+.slick-slide img {
+  display: inline-block !important;
 }
 .slick-prev, .slick-next {
-  background-color: black;
-  height: 100px;
-  width: 100px;
+  top: 34%!important;
+  width: 45px!important;
+  height: 90px!important;
+  background-color: rgba(34,34,34,0.75)!important;
+  border: 1px solid #222223!important;
 }
+
 #featuredBrands {
   padding: 40px 0;
 }
@@ -384,9 +422,9 @@ body {
 
 @media (max-width: 600px) {
   #homePageTop .leftMessageContainer {
-  width: 100%;
+    width: 100%;
   }
-#homePageTop .rightMessageContainer {
+  #homePageTop .rightMessageContainer {
     display: none;
   }
 }
