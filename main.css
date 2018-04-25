@@ -400,10 +400,22 @@ padding: 10px;
 }
 .footerContactUs {
   padding-top: 40px;
+  padding-bottom: 20px;
+}
+.contactItemsContainer .flexContainer {
+  align-items: center;
+}
+.footerContactUs img {
+  padding-bottom: 20px;
+}
+.addressIcon {
+  float: left;
+  width: 100%;
 }
 .contact {
   padding: 3px 10px;
 }
+
 
 /* MEDIA QUERIES */
 @media (max-width: 1800px) {
@@ -456,7 +468,7 @@ padding: 10px;
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   #homePageTop .leftMessageContainer {
     width: 100%;
   }
@@ -464,17 +476,59 @@ padding: 10px;
     display: none;
   }
 }
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
+ * {
+   overflow-x: hidden;
+ }
+  .c-menu {
+    width: 230px;
+  }
   #header .flexContainer {
     flex-wrap: nowrap;
   }
   #header .logoHolder img {
     width: 50%;
   }
+  .slick-prev, .slick-next {
+    visibility: ;
+  }
   .leftMessageContainer {
     height: 240px;
   }
   .messageBlockRow h3 {
     font-size: 24px;
+  }
+  #featuredBrands {
+    padding: 0;
+  }
+  .featuredBrand {
+    padding: 5px;
+  }
+  .featuredBrand img {
+    width: 75px;
+  }
+  .categoryContainer {
+    text-align: left;
+    margin-top: 0px!important;
+  }
+  .categoryLinkage {
+    width: 100%;
+    border-top: 1px solid #ececea;
+    padding: 6px 0px;
+  }
+  .categoryLinkage img {
+    width: 50px;
+    float: left;
+  }
+  .categoryLinkage .categoryLabel {
+    padding: 20px 0 10px 0;
+    margin-left: 100px;
+  }
+  .footerLinkContainer div {
+    width: 100%
+  }
+  .footerContactUs img {
+    width: 100%;
+    padding-bottom: 20px;
   }
 }
