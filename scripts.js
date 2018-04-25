@@ -7,7 +7,7 @@ $('.icon-hamburger').on('click', function() {
 
 $('.backContainer-left').on('click', function() {
   console.log('You clicked the back button!');
-  $('.c-menu--slide-left').css('left', '-360px');
+  $('.c-menu--slide-left').css('left', '-370px');
   // $('body').css('background-color', 'white');
 })
 
